@@ -28,8 +28,8 @@ A fatigue study of the Porsche 992 PDK transmission input shaft using two indepe
 
 This study evaluates the structural integrity and fatigue life of the Porsche 992 PDK transmission input shaft under the worst operating conditions it will see: peak overboost torque of 530 Nm. Two independent methods are run and checked against each other:
 
-1. **Python analytical model** — gear mesh forces, bending moment diagram, Modified Goodman fatigue criterion with Marin correction factors, S-N curve, safety factor swept across all 8 PDK gear ratios
-2. **Fusion 360 CAD + ANSYS FEA** — stepped shaft geometry with shoulder fillets, static structural validation
+1. **Python analytical model**: gear mesh forces, bending moment diagram, Modified Goodman fatigue criterion with Marin correction factors, S-N curve, safety factor swept across all 8 PDK gear ratios
+2. **Fusion 360 CAD + ANSYS FEA**: stepped shaft geometry with shoulder fillets, static structural validation
 
 Where the two methods agree (static yield behaviour), that agreement gives confidence in the fatigue prediction, which only the analytical method can produce.
 
@@ -121,13 +121,13 @@ The input shaft sees the same torque regardless of which of the 8 gears is engag
 
 ![Von Mises Stress](von_mises_stress.png)
 
-Maximum 525.75 MPa at the Bearing B fixed support — a stress singularity artefact from the rigid boundary condition, not a real material stress. Average working stress across the shaft body is 41.69 MPa; the spline region reads 117–175 MPa, consistent with combined bending and torsion.
+Maximum 525.75 MPa at the Bearing B fixed support, a stress singularity artefact from the rigid boundary condition rather than a real material stress. Average working stress across the shaft body is 41.69 MPa; the spline region reads 117–175 MPa, consistent with combined bending and torsion.
 
 ### Total deformation
 
 ![Total Deformation](total_deformation.png)
 
-Maximum deflection 0.076 mm at the gear mesh zone — 0.038% of shaft length, geometrically negligible. Zero at the fixed support, maximum near the applied transverse force: a physically correct pattern.
+Maximum deflection 0.076 mm at the gear mesh zone, 0.038% of shaft length and geometrically negligible. Zero at the fixed support, maximum near the applied transverse force: a physically correct pattern.
 
 ### Safety factor
 
@@ -225,4 +225,4 @@ bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate r
+*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate rol

@@ -29,10 +29,10 @@ The module houses 15 × 21700 cylindrical Li-ion cells in a 3 × 5 grid inside a
 
 The workflow has four phases:
 
-1. **Python thermal analysis** — analytical sizing, cooling strategy selection, transient response
-2. **ISO engineering drawing** — three orthographic views with full dimensioning
-3. **Fusion 360 CAD** — parametric housing with 15 cylindrical cell pockets
-4. **ANSYS Steady-State Thermal FEA** — 3D validation with boundary conditions
+1. **Python thermal analysis**: analytical sizing, cooling strategy selection, transient response
+2. **ISO engineering drawing**: three orthographic views with full dimensioning
+3. **Fusion 360 CAD**: parametric housing with 15 cylindrical cell pockets
+4. **ANSYS Steady-State Thermal FEA**: 3D validation with boundary conditions
 
 ---
 
@@ -85,7 +85,7 @@ Forced air at h = 50 W/m²K gives a 17.8 °C thermal margin to the 60 °C limit.
 Bi = h × L_c / k = 50 × (0.021/6) / 160 = 0.0011
 ```
 
-Bi << 0.1 — lumped capacitance model is valid.
+Bi << 0.1, so the lumped capacitance model is valid.
 
 ### Thermal time constants
 
@@ -102,10 +102,10 @@ Bi << 0.1 — lumped capacitance model is valid.
 Housing built as a parametric solid body with 15 cylindrical cell pockets.
 
 **Workflow:**
-1. Extrude solid box — 71 × 117 × 76 mm
-2. Sketch 15 circles (Ø21 mm) on top face — 3 × 5 grid at 23 mm pitch, first centre at 12.5 mm from each outer wall
-3. Extrude Cut 73 mm deep — leaves a 3 mm structural floor
-4. No shell operation needed — the 2 mm clearance between cell and wall is defined by the pocket geometry itself
+1. Extrude solid box, 71 × 117 × 76 mm
+2. Sketch 15 circles (Ø21 mm) on top face: 3 × 5 grid at 23 mm pitch, first centre at 12.5 mm from each outer wall
+3. Extrude Cut 73 mm deep, leaving a 3 mm structural floor
+4. No shell operation needed. The 2 mm clearance between cell and wall is defined by the pocket geometry itself
 
 ---
 
@@ -173,7 +173,7 @@ The script outputs:
 ## Engineering decisions
 
 **Why forced air and not liquid cooling?**
-Liquid cooling gets down to 25.6 °C but doubles system complexity and adds leak risk. Forced air at 38.2 °C still leaves a 22 °C margin below the 60 °C limit, plus another 17.8 °C beyond that. For a module running at 2C discharge, forced air is the right trade-off.
+Liquid cooling gets down to 25.6 °C but doubles system complexity and adds leak risk. Forced air at 38.2 °C still leaves a 22 °C margin below the 60 °C limit, plus another 17.8 °C beyond that. For a module running at 2C discharge, forced air is the better choice.
 
 **Why Al 6061-T6?**
 High thermal conductivity (160 W/mK), good machinability for the pocket features, and enough strength for automotive vibration loads. The 2 mm wall clearance and 3 mm floor both sit within typical CNC tolerances.
@@ -201,4 +201,4 @@ bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in battery systems, thermal 
+*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in battery systems, thermal management, and struc

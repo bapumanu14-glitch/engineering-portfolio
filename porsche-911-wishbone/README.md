@@ -32,9 +32,9 @@ The front upper wishbone carries the highest combined loads of any suspension li
 
 The workflow has three phases:
 
-1. **Vehicle dynamics load calculation (Python)** — six load cases derived from 992 GT3 mass, geometry, and peak g-loadings
-2. **Fusion 360 CAD** — hollow aluminium A-arm, converging tubes, ball joint boss, inboard mounting flanges
-3. **ANSYS static structural FEA** — stress, deformation, and safety factor under the critical combined load case
+1. **Vehicle dynamics load calculation (Python)**: six load cases derived from 992 GT3 mass, geometry, and peak g-loadings
+2. **Fusion 360 CAD**: hollow aluminium A-arm, converging tubes, ball joint boss, inboard mounting flanges
+3. **ANSYS static structural FEA**: stress, deformation, and safety factor under the critical combined load case
 
 ---
 
@@ -73,7 +73,7 @@ Six load cases were evaluated across pure cornering, pure braking, and combined 
 | **LC5** | **Combined (selected)** | **1.2g** | **1.2g** | **11,877** |
 | LC6 | Combined (peak, context only) | 1.5g | 1.5g | 14,845 |
 
-LC5 gives the highest resultant force in the upper link and was chosen as the FEA design load case. LC6 was noted for context but not run to FEA — the geometry clearly fails at LC5 first, so a harder case adds no new information.
+LC5 gives the highest resultant force in the upper link and was chosen as the FEA design load case. LC6 was noted for context but not run to FEA. The geometry clearly fails at LC5 first, so a harder case adds no new information.
 
 **Applied at the outboard ball joint face:**
 Fz = 6,105 N (vertical) · Fy = 8,346 N (lateral) · Fx = 5,842 N (longitudinal)
@@ -88,7 +88,7 @@ Fz = 6,105 N (vertical) · Fy = 8,346 N (lateral) · Fx = 5,842 N (longitudinal)
 | Element type | Tetrahedral (generated automatically) |
 | Global element size | 3 mm, adaptive sizing |
 | Fixed supports | 4 cylindrical bore faces, inboard mounting flanges |
-| Applied load | LC5 — three force components at outboard ball joint face |
+| Applied load | LC5, three force components at outboard ball joint face |
 | Material | Al 6061-T6 (E = 68.9 GPa, ν = 0.33, σy = 276 MPa, σu = 310 MPa) |
 | Target factor of safety | 2.5 (motorsport structural requirement) |
 
@@ -100,19 +100,19 @@ Fz = 6,105 N (vertical) · Fy = 8,346 N (lateral) · Fx = 5,842 N (longitudinal)
 
 ![Von Mises Stress](fea_stress.png)
 
-Peak stress of 1,979.9 MPa appears at the inboard fixed support — this is a **stress singularity**, a meshing artefact of applying a mathematically rigid constraint, not a real material stress (see Discussion). The arm tubes themselves read 400–700 MPa across most of their length, well above the 276 MPa yield limit.
+Peak stress of 1,979.9 MPa appears at the inboard fixed support. This is a **stress singularity**, a meshing artefact of applying a mathematically rigid constraint, not a real material stress (see Discussion). The arm tubes themselves read 400–700 MPa across most of their length, well above the 276 MPa yield limit.
 
 ### Total deformation
 
 ![Deformation](fea_deformation.png)
 
-Maximum deformation of 50.92 mm at the ball joint tip — 14.5% of the arm length. A real suspension link should deflect fractions of a millimetre under load, so this number alone signals a structural problem.
+Maximum deformation of 50.92 mm at the ball joint tip, 14.5% of the arm length. A real suspension link should deflect fractions of a millimetre under load, so this number alone signals a structural problem.
 
 ### Safety factor
 
 ![Safety Factor](fea_safety_factor.png)
 
-Red zones (FoS < 1) cover most of the arm tubes — yielding is predicted throughout the structure under LC5. The blue zone at the ball joint boss (FoS > 10) confirms that region is not the weak point; the failure is isolated to the tube cross section.
+Red zones (FoS < 1) cover most of the arm tubes, so yielding is predicted throughout the structure under LC5. The blue zone at the ball joint boss (FoS > 10) confirms that region is not the weak point; the failure is isolated to the tube cross section.
 
 ---
 
@@ -194,4 +194,4 @@ bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in structural
+*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in structural simulation, vehicle 
