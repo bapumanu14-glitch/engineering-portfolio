@@ -7,7 +7,7 @@
 ![Fusion 360](https://img.shields.io/badge/Fusion_360-CAD-E8601C)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-A dual-method fatigue study of the Porsche 992 PDK transmission input shaft: a Python Modified Goodman analysis cross-validated against ANSYS Mechanical FEA. The shaft survives any single load event — but fails the fatigue criterion under sustained peak torque.
+A fatigue study of the Porsche 992 PDK transmission input shaft using two independent methods: a Python Modified Goodman analysis, checked against ANSYS Mechanical FEA. The shaft survives any single load event, but fails the fatigue criterion under sustained peak torque.
 
 ---
 
@@ -20,15 +20,15 @@ A dual-method fatigue study of the Porsche 992 PDK transmission input shaft: a P
 | Max deformation | not computed | 0.076 mm (0.038% of length) | FEA additional insight |
 | Critical location | shoulder fillet | fixed support (singularity) | singularity masks real zone |
 
-**Key finding:** the shaft will not yield under a single peak-torque event, but the Modified Goodman criterion predicts fatigue crack initiation before rated service life. Static FEA alone cannot see this — it's why fatigue analysis is mandatory for rotating powertrain components.
+**Bottom line:** the shaft will not yield under a single peak torque event, but the Modified Goodman criterion predicts fatigue crack initiation before rated service life. Static FEA alone can't see this, which is why fatigue analysis is mandatory for rotating powertrain components.
 
 ---
 
 ## Project overview
 
-This study evaluates the structural integrity and fatigue life of the Porsche 992 PDK transmission input shaft under worst-case operating conditions: peak overboost torque of 530 Nm. Two independent methods are run and cross-checked against each other:
+This study evaluates the structural integrity and fatigue life of the Porsche 992 PDK transmission input shaft under the worst operating conditions it will see: peak overboost torque of 530 Nm. Two independent methods are run and checked against each other:
 
-1. **Python analytical model** — gear mesh forces, bending moment diagram, Modified Goodman fatigue criterion with Marin correction factors, S-N curve, gear-by-gear safety factor sweep across all 8 PDK ratios
+1. **Python analytical model** — gear mesh forces, bending moment diagram, Modified Goodman fatigue criterion with Marin correction factors, S-N curve, safety factor swept across all 8 PDK gear ratios
 2. **Fusion 360 CAD + ANSYS FEA** — stepped shaft geometry with shoulder fillets, static structural validation
 
 Where the two methods agree (static yield behaviour), that agreement gives confidence in the fatigue prediction, which only the analytical method can produce.
@@ -40,11 +40,11 @@ Where the two methods agree (static yield behaviour), that agreement gives confi
 | Parameter | Value |
 |-----------|-------|
 | Vehicle | Porsche 911 (992) |
-| Transmission | 8-speed PDK dual-clutch |
+| Transmission | PDK dual clutch, 8 gears |
 | Engine torque (nominal / peak overboost) | 450 Nm / 530 Nm |
 | Gear pitch radius | 27 mm |
 | Pressure angle / helix angle | 20° / 25° |
-| Material | 20MnCr5 case-hardened steel (HRC 58–62) |
+| Material | 20MnCr5 case hardened steel (HRC 58–62) |
 | Sut / Sy | 1200 MPa / 1000 MPa |
 
 **Shaft geometry** (stepped, 200 mm total span):
@@ -96,9 +96,9 @@ FoS < 1.0 on the Goodman criterion means fatigue crack initiation is predicted b
 
 ![Fatigue Analysis Summary](plots/shaft_fatigue_analysis.png)
 
-Six-panel summary: bending moment diagram, bending stress along shaft length, S-N curve with operating point, Modified Goodman diagram, results table, and gear mesh force breakdown.
+Six panel summary: bending moment diagram, bending stress along shaft length, S-N curve with operating point, Modified Goodman diagram, results table, and gear mesh force breakdown.
 
-### Gear-by-gear sweep
+### Sweep across gears
 
 The input shaft sees the same torque regardless of which of the 8 gears is engaged (torque multiplication happens downstream at the output shaft), so this was checked for completeness.
 
@@ -110,7 +110,7 @@ The input shaft sees the same torque regardless of which of the 8 gears is engag
 
 | Item | Setting |
 |------|---------|
-| Element size | 2 mm global, auto-refined at fillets |
+| Element size | 2 mm global, refined automatically at fillets |
 | Fixed support | Bearing B outer cylindrical face — all DOF constrained |
 | Cylindrical support | Bearing A outer cylindrical face — radial fixed, axial free |
 | Torsional moment | 530,000 N·mm about shaft axis |
@@ -133,7 +133,7 @@ Maximum deflection 0.076 mm at the gear mesh zone — 0.038% of shaft length, ge
 
 ![Safety Factor](safety_factor.png)
 
-Minimum static safety factor 1.902 at the spline-main junction. Most of the shaft (blue) carries a safety factor above 10, confirming the shaft will not yield statically — consistent with the analytical yield FoS of 1.88.
+Minimum static safety factor 1.902 at the junction between the spline and main sections. Most of the shaft (blue) carries a safety factor above 10, confirming the shaft will not yield statically, consistent with the analytical yield FoS of 1.88.
 
 ---
 
@@ -147,13 +147,13 @@ Minimum static safety factor 1.902 at the spline-main junction. Most of the shaf
 | Critical location | shoulder fillet | fixed support (singularity) | singularity masks real zone |
 | Failure prediction | fatigue cracking | no static failure | different physical modes |
 
-The close agreement on static yield (1.88 vs 1.90) cross-validates the load model and geometry, which gives confidence that the fatigue prediction — something FEA alone can't produce without a dedicated fatigue module — is grounded correctly.
+The close agreement on static yield (1.88 vs 1.90) backs up the load model and geometry, which gives confidence that the fatigue prediction, something FEA alone can't produce without a dedicated fatigue module, is grounded correctly.
 
 ---
 
 ## Discussion
 
-A Goodman FoS of 0.84 means the shaft as modelled would not survive infinite fatigue life under sustained peak torque. In production, Porsche addresses this through mechanisms not captured in this simplified analysis: case-hardening introduces compressive residual stresses that raise the effective endurance limit beyond the bulk material value used here, overboost torque is transient rather than sustained (limited by engine management), and the real gear contact ratio distributes mesh force across multiple teeth rather than concentrating it at a single point.
+A Goodman FoS of 0.84 means the shaft as modelled would not survive infinite fatigue life under sustained peak torque. In production, Porsche addresses this through mechanisms not captured in this simplified analysis: case hardening introduces compressive residual stresses that raise the effective endurance limit beyond the bulk material value used here, overboost torque is transient rather than sustained since engine management limits it, and the real gear contact ratio spreads mesh force across multiple teeth rather than concentrating it at a single point.
 
 ---
 
@@ -175,7 +175,7 @@ A Goodman FoS of 0.84 means the shaft as modelled would not survive infinite fat
 porsche-pdk-shaft/
 ├── shaft_fatigue.py                 # Full Python fatigue analysis (Modified Goodman, Marin factors, S-N curve)
 ├── plots/
-│   ├── shaft_fatigue_analysis.png   # 6-panel summary: BMD, stress, S-N curve, Goodman diagram, table, forces
+│   ├── shaft_fatigue_analysis.png   # Six panel summary: BMD, stress, S-N curve, Goodman diagram, table, forces
 │   └── gear_comparison.png          # Safety factor across all 8 PDK gear ratios
 ├── von_mises_stress.png             # ANSYS Von Mises stress contour
 ├── total_deformation.png            # ANSYS total deformation contour
@@ -202,18 +202,18 @@ pip install numpy matplotlib
 python shaft_fatigue.py
 ```
 
-Outputs gear mesh forces, bending moments, fatigue stresses, Marin factors, and the Modified Goodman safety factor to the console, plus a 6-panel results figure and an 8-gear safety factor comparison to `plots/`.
+Outputs gear mesh forces, bending moments, fatigue stresses, Marin factors, and the Modified Goodman safety factor to the console, plus a six panel results figure and a safety factor comparison across all eight gears, saved to `plots/`.
 
 ---
 
 ## Skills demonstrated
 
-- Fatigue analysis: Modified Goodman criterion, Marin surface/size/reliability correction factors, S-N curve construction (Shigley two-point method)
+- Fatigue analysis: Modified Goodman criterion, Marin surface/size/reliability correction factors, S-N curve construction using Shigley's two point method
 - Mechanics of materials: bending moment diagrams for a stepped shaft, combined bending/torsion stress, stress concentration at shoulder fillets
-- Python: NumPy analytical modelling, multi-panel Matplotlib visualisation (GridSpec)
+- Python: NumPy analytical modelling, multi panel Matplotlib visualisation with GridSpec
 - CAD: Fusion 360 revolve modelling for stepped shaft geometry, STEP export
-- FEA: ANSYS Mechanical static structural analysis, cylindrical and fixed support boundary conditions, combined torsional/bending/axial loading
-- Cross-validation: using independent analytical and numerical methods to build confidence in a failure prediction that neither method alone could fully support
+- FEA: ANSYS Mechanical static structural analysis, cylindrical and fixed support boundary conditions, combined torsional, bending, and axial loading
+- Method comparison: using independent analytical and numerical methods to build confidence in a failure prediction that neither method alone could fully support
 
 ---
 
@@ -225,4 +225,4 @@ bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in powertrain engineering, structural simulation, and CAE.*
+*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate r

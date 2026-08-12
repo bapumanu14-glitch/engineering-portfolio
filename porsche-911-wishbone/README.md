@@ -22,7 +22,7 @@ A full vehicle dynamics → CAD → FEA chain for the 992 GT3 front upper wishbo
 | Max deformation | 50.92 mm | — | flags oversized slenderness |
 | Recommended fix | 20 mm → 25 mm tube OD | — | ~2.4× stiffness gain |
 
-*The whole-body average safety factor (3.45) is skewed by the low-stress ball joint boss region. The arm tubes — the actual load path — average 414 MPa, 1.5× over yield. See [Discussion](#discussion) for why the headline average is misleading.
+*The average safety factor across the whole body (3.45) is skewed by the ball joint boss region, where stress is low. The arm tubes, which are the actual load path, average 414 MPa, 1.5× over yield. See [Discussion](#discussion) for why the headline average is misleading.
 
 ---
 
@@ -85,7 +85,7 @@ Fz = 6,105 N (vertical) · Fy = 8,346 N (lateral) · Fx = 5,842 N (longitudinal)
 | Setting | Value |
 |---------|-------|
 | Solver | ANSYS Mechanical 2026 R1 |
-| Element type | Tetrahedral (auto-generated) |
+| Element type | Tetrahedral (generated automatically) |
 | Global element size | 3 mm, adaptive sizing |
 | Fixed supports | 4 cylindrical bore faces, inboard mounting flanges |
 | Applied load | LC5 — three force components at outboard ball joint face |
@@ -112,15 +112,15 @@ Maximum deformation of 50.92 mm at the ball joint tip — 14.5% of the arm lengt
 
 ![Safety Factor](fea_safety_factor.png)
 
-Red zones (FoS < 1) cover most of the arm tubes — yielding is predicted throughout the structure under LC5. The blue zone at the ball joint boss (FoS > 10) confirms that region is not the weak point; the failure is isolated to the tube cross-section.
+Red zones (FoS < 1) cover most of the arm tubes — yielding is predicted throughout the structure under LC5. The blue zone at the ball joint boss (FoS > 10) confirms that region is not the weak point; the failure is isolated to the tube cross section.
 
 ---
 
 ## Discussion
 
-**Stress singularity at fixed supports.** The 1,979.9 MPa peak at the inboard mount is a numerical artefact: in linear static FEA, stress at a rigidly-constrained point grows without bound as the mesh refines. It does not represent a real material stress. All conclusions here are drawn from the arm tube regions, away from the constraint boundaries.
+**Stress singularity at fixed supports.** The 1,979.9 MPa peak at the inboard mount is a numerical artefact: in linear static FEA, stress at a point constrained rigidly grows without bound as the mesh refines. It does not represent a real material stress. All conclusions here are drawn from the arm tube regions, away from the constraint boundaries.
 
-**Arm tube stress.** Average von Mises stress across the tubes is 414 MPa — 1.5× the yield strength of Al 6061-T6. To meet FoS = 2.5, allowable stress is 110 MPa, meaning the tubes need to carry roughly four times less stress than they currently do. A cross-section change is unavoidable.
+**Arm tube stress.** Average von Mises stress across the tubes is 414 MPa, 1.5× the yield strength of Al 6061-T6. To meet FoS = 2.5, allowable stress is 110 MPa, meaning the tubes need to carry roughly four times less stress than they currently do. The cross section has to change.
 
 **Deformation reliability.** At stresses this far above yield, linear elastic assumptions break down and the solver overpredicts deformation. The 50.92 mm figure is not numerically reliable in isolation, but it points to the same conclusion as the stress result.
 
@@ -135,7 +135,7 @@ Red zones (FoS < 1) cover most of the arm tubes — yielding is predicted throug
 | R3 | Switch to steel (4130 Chromoly) | 16 mm OD, 1.5 mm wall | Higher strength (σy = 460 MPa). Heavier, but standard in club motorsport. |
 | R4 | Carbon fibre sleeve reinforcement | Existing Al tube + CF wrap | High stiffness gain at low mass. Complex to fabricate, premium solution. |
 
-**Next steps:** rebuild with 25 mm OD tubes and re-run FEA (predicted peak stress ≈ 170 MPa, FoS ≈ 1.6, closing most of the gap to 2.5); replace the bore-hole fixed supports with remote displacement constraints to remove the inboard singularity; run a mesh convergence study at 2/3/5 mm to confirm the current 3 mm mesh is within 5% of a finer solution.
+**Next steps:** rebuild with 25 mm OD tubes and run the FEA again (predicted peak stress ≈ 170 MPa, FoS ≈ 1.6, closing most of the gap to 2.5); replace the bore hole fixed supports with remote displacement constraints to remove the inboard singularity; run a mesh convergence study at 2, 3, and 5 mm to confirm the current 3 mm mesh is within 5% of a finer solution.
 
 ---
 
@@ -179,9 +179,9 @@ Outputs wheel loads and wishbone forces for all six load cases to the console, p
 ## Skills demonstrated
 
 - Vehicle dynamics: weight transfer under combined lateral/longitudinal acceleration, wishbone force resolution from wheel contact loads
-- Python: NumPy vectorised load case sweep, Matplotlib multi-panel visualisation
+- Python: NumPy vectorised load case sweep, multi panel visualisation in Matplotlib
 - CAD: Fusion 360 parametric A-arm modelling, STEP export
-- FEA: ANSYS Mechanical static structural analysis, fixed support and multi-component force boundary conditions, mesh sizing
+- FEA: ANSYS Mechanical static structural analysis, fixed support and multi component force boundary conditions, mesh sizing
 - Failure analysis: distinguishing real structural stress from singularity artefacts, translating FEA results into concrete design recommendations
 
 ---
@@ -194,4 +194,4 @@ bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in structural simulation, vehicle dynamics, and CAE.*
+*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in structural

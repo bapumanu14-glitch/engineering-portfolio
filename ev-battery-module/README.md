@@ -7,7 +7,7 @@
 ![Fusion 360](https://img.shields.io/badge/Fusion_360-CAD-E8601C)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-A full thermal design workflow for a 15-cell Li-ion battery module — from first-principles Python analysis through parametric CAD to finite element validation in ANSYS.
+A full thermal design workflow for a 15-cell Li-ion battery module, starting from first principles in Python and ending with finite element validation in ANSYS.
 
 ---
 
@@ -45,9 +45,9 @@ The workflow has four phases:
 | Housing material | Aluminium 6061-T6 |
 | Module dimensions | 71 × 117 × 76 mm |
 | Cell diameter / height | 21 mm / 70 mm |
-| Centre-to-centre pitch | 23 mm |
+| Pitch (centre to centre) | 23 mm |
 | Pocket depth | 73 mm (3 mm floor) |
-| Cell-to-wall clearance | 2 mm |
+| Clearance, cell to wall | 2 mm |
 | Thermal conductivity (k) | 160 W/mK |
 
 ---
@@ -105,7 +105,7 @@ Housing built as a parametric solid body with 15 cylindrical cell pockets.
 1. Extrude solid box — 71 × 117 × 76 mm
 2. Sketch 15 circles (Ø21 mm) on top face — 3 × 5 grid at 23 mm pitch, first centre at 12.5 mm from each outer wall
 3. Extrude Cut 73 mm deep — leaves a 3 mm structural floor
-4. No shell operation needed — the 2 mm cell-to-wall clearance is defined by the pocket geometry itself
+4. No shell operation needed — the 2 mm clearance between cell and wall is defined by the pocket geometry itself
 
 ---
 
@@ -123,12 +123,12 @@ Housing built as a parametric solid body with 15 cylindrical cell pockets.
 ### FEA results
 
 ```
-T_max  =  42.2 °C  (centre-column cells, hottest)
-T_min  =  40.8 °C  (corner cells, two-sided convection)
+T_max  =  42.2 °C  (centre column cells, hottest)
+T_min  =  40.8 °C  (corner cells, cooled from two sides)
 ΔT     =   1.4 °C  ← well within 5 °C limit
 ```
 
-Max heat flux 8054 W/m² appears at the base of centre-column pockets — the longest conduction path to a cooled face.
+Max heat flux 8054 W/m² appears at the base of the centre column pockets, where the conduction path to a cooled face is longest.
 
 ---
 
@@ -170,16 +170,16 @@ The script outputs:
 
 ---
 
-## Key engineering decisions
+## Engineering decisions
 
 **Why forced air and not liquid cooling?**
-Liquid cooling achieves 25.6 °C but doubles system complexity and adds leak risk. Forced air at 38.2 °C still has a 22 °C margin below the 60 °C limit, and a further 17.8 °C margin from the target. For a module at 2C discharge, forced air is the right trade-off.
+Liquid cooling gets down to 25.6 °C but doubles system complexity and adds leak risk. Forced air at 38.2 °C still leaves a 22 °C margin below the 60 °C limit, plus another 17.8 °C beyond that. For a module running at 2C discharge, forced air is the right trade-off.
 
 **Why Al 6061-T6?**
-High thermal conductivity (160 W/mK), good machinability for the pocket features, and adequate strength for automotive vibration loads. The 2 mm wall clearance and 3 mm floor are within typical CNC tolerances.
+High thermal conductivity (160 W/mK), good machinability for the pocket features, and enough strength for automotive vibration loads. The 2 mm wall clearance and 3 mm floor both sit within typical CNC tolerances.
 
-**Python vs ANSYS — why is there a 10.5 % difference?**
-The lumped model treats the housing as isothermal and cannot capture 3D corner heat-flux concentration or the effect of the open top face reducing effective cooling area. The 10.5 % gap falls within the ±15 % tolerance expected from analytical models, and both reach the same design conclusion.
+**Python vs ANSYS — why is there a 10.5% difference?**
+The lumped model treats the housing as isothermal, so it can't capture 3D corner heat flux concentration or the effect of the open top face reducing effective cooling area. The 10.5% gap falls within the ±15% tolerance expected from analytical models, and both methods reach the same design conclusion anyway.
 
 ---
 
@@ -187,9 +187,9 @@ The lumped model treats the housing as isothermal and cannot capture 3D corner h
 
 - Heat transfer theory: Newton's Law of Cooling, Joule heating, Biot number, lumped capacitance
 - Python: numerical modelling, NumPy, Matplotlib, structured output
-- CAD: Fusion 360 parametric design, Extrude Cut operations, assembly-aware tolerancing
+- CAD: Fusion 360 parametric design, Extrude Cut operations, tolerancing for real assembly
 - FEA: ANSYS Steady-State Thermal, mesh generation, boundary condition setup, result interpretation
-- Engineering drawing: ISO three-view orthographic projection, GD&T callouts
+- Engineering drawing: ISO orthographic projection across three views, GD&T callouts
 
 ---
 
@@ -201,4 +201,4 @@ bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in battery systems, thermal management, and structural simulation.*
+*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in battery systems, thermal 
