@@ -1,0 +1,10 @@
+README_preview.html
+.DS_Store
+Thumbs.db
+*.wbpj
+*_files/
+*.wdb
+*.mechdb
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

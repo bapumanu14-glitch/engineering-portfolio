@@ -1,0 +1,271 @@
+<svg width="920" height="700" viewBox="0 0 920 700" xmlns="http://www.w3.org/2000/svg" style="background:white;font-family:Arial">
+<defs>
+  <marker id="arr" markerWidth="5" markerHeight="5" refX="5" refY="2.5" orient="auto">
+    <polygon points="0,0 5,2.5 0,5" fill="#333"/>
+  </marker>
+  <marker id="arr-r" markerWidth="5" markerHeight="5" refX="0" refY="2.5" orient="auto">
+    <polygon points="5,0 0,2.5 5,5" fill="#333"/>
+  </marker>
+  <marker id="dot" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto">
+    <circle cx="2" cy="2" r="1.5" fill="#333"/>
+  </marker>
+  <pattern id="hatch" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)">
+    <line x1="0" y1="0" x2="0" y2="5" stroke="#aaa" stroke-width="0.5"/>
+  </pattern>
+</defs>
+
+<!-- Background -->
+<rect width="920" height="700" fill="white"/>
+
+<!-- Outer border -->
+<rect x="6" y="6" width="908" height="688" fill="none" stroke="black" stroke-width="2"/>
+<rect x="12" y="12" width="896" height="676" fill="none" stroke="black" stroke-width="0.5"/>
+
+<!-- Projection lines -->
+<line x1="178" y1="302" x2="178" y2="350" stroke="#aaa" stroke-width="0.4" stroke-dasharray="4,3"/>
+<line x1="320" y1="302" x2="320" y2="350" stroke="#aaa" stroke-width="0.4" stroke-dasharray="4,3"/>
+<line x1="320" y1="350" x2="348" y2="350" stroke="#aaa" stroke-width="0.4" stroke-dasharray="4,3"/>
+<line x1="320" y1="502" x2="348" y2="502" stroke="#aaa" stroke-width="0.4" stroke-dasharray="4,3"/>
+
+<text x="465" y="315" text-anchor="middle" font-size="8" fill="#555" font-style="italic">THIRD ANGLE PROJECTION</text>
+<circle cx="465" cy="335" r="8" fill="none" stroke="#555" stroke-width="0.7"/>
+<circle cx="465" cy="335" r="4" fill="none" stroke="#555" stroke-width="0.7"/>
+<line x1="457" y1="335" x2="459" y2="335" stroke="#555" stroke-width="0.5"/>
+<line x1="471" y1="335" x2="473" y2="335" stroke="#555" stroke-width="0.5"/>
+<!-- TOP VIEW -->
+<text x="249" y="36" text-anchor="middle" font-size="10" font-weight="bold" fill="#111">TOP VIEW  (Plan)</text>
+<rect x="178" y="68" width="142" height="234" fill="white" stroke="black" stroke-width="1.2"/>
+<rect x="184" y="74" width="130" height="222" fill="white" stroke="black" stroke-width="0.6"/>
+<circle cx="205.0" cy="95.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="180.0" y1="95.0" x2="230.0" y2="95.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="205.0" y1="70.0" x2="205.0" y2="120.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="205.0" cy="141.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="180.0" y1="141.0" x2="230.0" y2="141.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="205.0" y1="116.0" x2="205.0" y2="166.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="205.0" cy="187.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="180.0" y1="187.0" x2="230.0" y2="187.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="205.0" y1="162.0" x2="205.0" y2="212.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="205.0" cy="233.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="180.0" y1="233.0" x2="230.0" y2="233.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="205.0" y1="208.0" x2="205.0" y2="258.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="205.0" cy="279.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="180.0" y1="279.0" x2="230.0" y2="279.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="205.0" y1="254.0" x2="205.0" y2="304.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="251.0" cy="95.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="226.0" y1="95.0" x2="276.0" y2="95.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="251.0" y1="70.0" x2="251.0" y2="120.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="251.0" cy="141.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="226.0" y1="141.0" x2="276.0" y2="141.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="251.0" y1="116.0" x2="251.0" y2="166.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="251.0" cy="187.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="226.0" y1="187.0" x2="276.0" y2="187.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="251.0" y1="162.0" x2="251.0" y2="212.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="251.0" cy="233.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="226.0" y1="233.0" x2="276.0" y2="233.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="251.0" y1="208.0" x2="251.0" y2="258.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="251.0" cy="279.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="226.0" y1="279.0" x2="276.0" y2="279.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="251.0" y1="254.0" x2="251.0" y2="304.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="297.0" cy="95.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="272.0" y1="95.0" x2="322.0" y2="95.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="297.0" y1="70.0" x2="297.0" y2="120.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="297.0" cy="141.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="272.0" y1="141.0" x2="322.0" y2="141.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="297.0" y1="116.0" x2="297.0" y2="166.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="297.0" cy="187.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="272.0" y1="187.0" x2="322.0" y2="187.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="297.0" y1="162.0" x2="297.0" y2="212.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="297.0" cy="233.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="272.0" y1="233.0" x2="322.0" y2="233.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="297.0" y1="208.0" x2="297.0" y2="258.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="297.0" cy="279.0" r="21.0" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="272.0" y1="279.0" x2="322.0" y2="279.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="297.0" y1="254.0" x2="297.0" y2="304.0" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+
+  <line x1="178" y1="68" x2="178" y2="46" stroke="#333" stroke-width="0.5" stroke-dasharray="none"/>
+  <line x1="320" y1="68" x2="320" y2="46" stroke="#333" stroke-width="0.5"/>
+  <line x1="178" y1="46" x2="320" y2="46" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="249.0" y="42" text-anchor="middle" font-size="9" font-family="Arial" fill="#111">71</text>
+
+  <line x1="178" y1="68" x2="150" y2="68" stroke="#333" stroke-width="0.5"/>
+  <line x1="178" y1="302" x2="150" y2="302" stroke="#333" stroke-width="0.5"/>
+  <line x1="150" y1="68" x2="150" y2="302" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="146" y="188.0" text-anchor="end" font-size="9" font-family="Arial" fill="#111">117</text>
+
+  <line x1="330" y1="68" x2="342" y2="68" stroke="#333" stroke-width="0.5"/>
+  <line x1="330" y1="74" x2="342" y2="74" stroke="#333" stroke-width="0.5"/>
+  <line x1="342" y1="68" x2="342" y2="74" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="346" y="74.0" text-anchor="start" font-size="9" font-family="Arial" fill="#111">3</text>
+<line x1="184.0" y1="95.0" x2="226.0" y2="95.0" stroke="#333" stroke-width="0.4" stroke-dasharray="2,2"/>
+
+  <line x1="184.0" y1="118.0" x2="184.0" y2="130.0" stroke="#333" stroke-width="0.5" stroke-dasharray="none"/>
+  <line x1="226.0" y1="118.0" x2="226.0" y2="130.0" stroke="#333" stroke-width="0.5"/>
+  <line x1="184.0" y1="130.0" x2="226.0" y2="130.0" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="205.0" y="142.0" text-anchor="middle" font-size="9" font-family="Arial" fill="#111">Ø 21</text>
+
+  <line x1="205.0" y1="68.0" x2="205.0" y2="56.0" stroke="#333" stroke-width="0.5" stroke-dasharray="none"/>
+  <line x1="251.0" y1="68.0" x2="251.0" y2="56.0" stroke="#333" stroke-width="0.5"/>
+  <line x1="205.0" y1="56.0" x2="251.0" y2="56.0" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="228.0" y="52.0" text-anchor="middle" font-size="9" font-family="Arial" fill="#111">23</text>
+
+  <line x1="178" y1="308.0" x2="178" y2="320.0" stroke="#333" stroke-width="0.5" stroke-dasharray="none"/>
+  <line x1="205.0" y1="308.0" x2="205.0" y2="320.0" stroke="#333" stroke-width="0.5"/>
+  <line x1="178" y1="320.0" x2="205.0" y2="320.0" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="191.5" y="332.0" text-anchor="middle" font-size="9" font-family="Arial" fill="#111">13.5</text>
+
+  <line x1="330" y1="95.0" x2="348" y2="95.0" stroke="#333" stroke-width="0.5"/>
+  <line x1="330" y1="141.0" x2="348" y2="141.0" stroke="#333" stroke-width="0.5"/>
+  <line x1="348" y1="95.0" x2="348" y2="141.0" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="352" y="121.0" text-anchor="start" font-size="9" font-family="Arial" fill="#111">23</text>
+
+  <line x1="342" y1="68" x2="360" y2="68" stroke="#333" stroke-width="0.5"/>
+  <line x1="342" y1="95.0" x2="360" y2="95.0" stroke="#333" stroke-width="0.5"/>
+  <line x1="360" y1="68" x2="360" y2="95.0" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="364" y="84.5" text-anchor="start" font-size="9" font-family="Arial" fill="#111">13.5</text>
+<!-- FRONT VIEW -->
+<text x="249" y="342" text-anchor="middle" font-size="10" font-weight="bold" fill="#111">FRONT VIEW</text>
+<rect x="178" y="350" width="142" height="152" fill="white" stroke="black" stroke-width="1.2"/>
+<rect x="184" y="356" width="130" height="140" fill="white" stroke="black" stroke-width="0.5" stroke-dasharray="5,3"/>
+<line x1="184.0" y1="356" x2="184.0" y2="496" stroke="#444" stroke-width="0.7" stroke-dasharray="5,3"/>
+<line x1="226.0" y1="356" x2="226.0" y2="496" stroke="#444" stroke-width="0.7" stroke-dasharray="5,3"/>
+<line x1="184.0" y1="496" x2="226.0" y2="496" stroke="#444" stroke-width="0.7" stroke-dasharray="5,3"/>
+<line x1="230.0" y1="356" x2="230.0" y2="496" stroke="#444" stroke-width="0.7" stroke-dasharray="5,3"/>
+<line x1="272.0" y1="356" x2="272.0" y2="496" stroke="#444" stroke-width="0.7" stroke-dasharray="5,3"/>
+<line x1="230.0" y1="496" x2="272.0" y2="496" stroke="#444" stroke-width="0.7" stroke-dasharray="5,3"/>
+<line x1="276.0" y1="356" x2="276.0" y2="496" stroke="#444" stroke-width="0.7" stroke-dasharray="5,3"/>
+<line x1="318.0" y1="356" x2="318.0" y2="496" stroke="#444" stroke-width="0.7" stroke-dasharray="5,3"/>
+<line x1="276.0" y1="496" x2="318.0" y2="496" stroke="#444" stroke-width="0.7" stroke-dasharray="5,3"/>
+<line x1="205.0" y1="345" x2="205.0" y2="507" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="251.0" y1="345" x2="251.0" y2="507" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="297.0" y1="345" x2="297.0" y2="507" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+
+  <line x1="320" y1="350" x2="340" y2="350" stroke="#333" stroke-width="0.5"/>
+  <line x1="320" y1="502" x2="340" y2="502" stroke="#333" stroke-width="0.5"/>
+  <line x1="340" y1="350" x2="340" y2="502" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="344" y="429.0" text-anchor="start" font-size="9" font-family="Arial" fill="#111">76</text>
+
+  <line x1="166" y1="350" x2="154" y2="350" stroke="#333" stroke-width="0.5"/>
+  <line x1="166" y1="356" x2="154" y2="356" stroke="#333" stroke-width="0.5"/>
+  <line x1="154" y1="350" x2="154" y2="356" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="150" y="356.0" text-anchor="end" font-size="9" font-family="Arial" fill="#111">3</text>
+
+  <line x1="166" y1="496" x2="154" y2="496" stroke="#333" stroke-width="0.5"/>
+  <line x1="166" y1="502" x2="154" y2="502" stroke="#333" stroke-width="0.5"/>
+  <line x1="154" y1="496" x2="154" y2="502" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="150" y="502.0" text-anchor="end" font-size="9" font-family="Arial" fill="#111">3</text>
+<line x1="322.0" y1="356" x2="332.0" y2="356" stroke="#333" stroke-width="0.4" stroke-dasharray="3,2"/>
+<line x1="322.0" y1="496" x2="332.0" y2="496" stroke="#333" stroke-width="0.4" stroke-dasharray="3,2"/>
+<line x1="328.0" y1="356" x2="328.0" y2="496" stroke="#333" stroke-width="0.4" stroke-dasharray="3,2" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+<text x="334.0" y="429" font-size="8" fill="#333" font-style="italic">70 (cell cavity depth)</text>
+
+  <line x1="178" y1="502" x2="178" y2="518" stroke="#333" stroke-width="0.5" stroke-dasharray="none"/>
+  <line x1="320" y1="502" x2="320" y2="518" stroke="#333" stroke-width="0.5"/>
+  <line x1="178" y1="518" x2="320" y2="518" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="249.0" y="530" text-anchor="middle" font-size="9" font-family="Arial" fill="#111">71</text>
+<!-- SIDE VIEW (Right) -->
+<text x="465" y="342" text-anchor="middle" font-size="10" font-weight="bold" fill="#111">SIDE VIEW  (Right)</text>
+<rect x="348" y="350" width="234" height="152" fill="white" stroke="black" stroke-width="1.2"/>
+<rect x="354" y="356" width="222" height="140" fill="white" stroke="black" stroke-width="0.5"/>
+<circle cx="375.0" cy="426" r="21.0" fill="white" stroke="#555" stroke-width="0.6" stroke-dasharray="5,3"/>
+<line x1="350.0" y1="426" x2="400.0" y2="426" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="421.0" cy="426" r="21.0" fill="white" stroke="#555" stroke-width="0.6" stroke-dasharray="5,3"/>
+<line x1="396.0" y1="426" x2="446.0" y2="426" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="467.0" cy="426" r="21.0" fill="white" stroke="#555" stroke-width="0.6" stroke-dasharray="5,3"/>
+<line x1="442.0" y1="426" x2="492.0" y2="426" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="513.0" cy="426" r="21.0" fill="white" stroke="#555" stroke-width="0.6" stroke-dasharray="5,3"/>
+<line x1="488.0" y1="426" x2="538.0" y2="426" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<circle cx="559.0" cy="426" r="21.0" fill="white" stroke="#555" stroke-width="0.6" stroke-dasharray="5,3"/>
+<line x1="534.0" y1="426" x2="584.0" y2="426" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<line x1="344" y1="426" x2="586" y2="426" stroke="#0057b7" stroke-width="0.5" stroke-dasharray="8,2,2,2"/>
+<rect x="574" y="420" width="8" height="12" fill="url(#hatch)" stroke="#333" stroke-width="0.7"/>
+<rect x="348" y="420" width="8" height="12" fill="url(#hatch)" stroke="#333" stroke-width="0.7"/>
+
+<line x1="582" y1="426" x2="602" y2="406" stroke="#333" stroke-width="0.5" marker-end="url(#arr)"/>
+<text x="604" y="404" font-size="8" fill="#333">Coolant ch.</text>
+<text x="604" y="413" font-size="8" fill="#333">6W × 4D mm</text>
+
+  <line x1="348" y1="502" x2="348" y2="520" stroke="#333" stroke-width="0.5" stroke-dasharray="none"/>
+  <line x1="582" y1="502" x2="582" y2="520" stroke="#333" stroke-width="0.5"/>
+  <line x1="348" y1="520" x2="582" y2="520" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="465.0" y="532" text-anchor="middle" font-size="9" font-family="Arial" fill="#111">117</text>
+
+  <line x1="582" y1="350" x2="602" y2="350" stroke="#333" stroke-width="0.5"/>
+  <line x1="582" y1="502" x2="602" y2="502" stroke="#333" stroke-width="0.5"/>
+  <line x1="602" y1="350" x2="602" y2="502" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="606" y="429.0" text-anchor="start" font-size="9" font-family="Arial" fill="#111">76</text>
+
+  <line x1="375.0" y1="342" x2="375.0" y2="332" stroke="#333" stroke-width="0.5" stroke-dasharray="none"/>
+  <line x1="421.0" y1="342" x2="421.0" y2="332" stroke="#333" stroke-width="0.5"/>
+  <line x1="375.0" y1="332" x2="421.0" y2="332" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="398.0" y="328" text-anchor="middle" font-size="9" font-family="Arial" fill="#111">23</text>
+
+  <line x1="348" y1="532" x2="348" y2="542" stroke="#333" stroke-width="0.5" stroke-dasharray="none"/>
+  <line x1="375.0" y1="532" x2="375.0" y2="542" stroke="#333" stroke-width="0.5"/>
+  <line x1="348" y1="542" x2="375.0" y2="542" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="361.5" y="554" text-anchor="middle" font-size="9" font-family="Arial" fill="#111">13.5</text>
+
+<!-- DETAIL: Cell Pocket Section -->
+<rect x="595" y="53" width="200" height="230" fill="#fafafa" stroke="#888" stroke-width="0.8" rx="2"/>
+<text x="695" y="63" text-anchor="middle" font-size="9" font-weight="bold" fill="#111">DETAIL A — Cell Pocket</text>
+<text x="695" y="73" text-anchor="middle" font-size="8" fill="#555">Section through cell axis (2:1)</text>
+<rect x="625" y="93" width="12" height="112" fill="url(#hatch)" stroke="black" stroke-width="0.7"/>
+<rect x="637" y="93" width="84" height="100" fill="white" stroke="black" stroke-width="0.7" stroke-dasharray="4,2"/>
+<rect x="721" y="93" width="12" height="112" fill="url(#hatch)" stroke="black" stroke-width="0.7"/>
+<rect x="625" y="193" width="108" height="12" fill="url(#hatch)" stroke="black" stroke-width="0.7"/>
+<text x="679" y="89" text-anchor="middle" font-size="8" fill="#333">Open (cell insertion)</text>
+<line x1="679" y1="91" x2="679" y2="96" stroke="#333" stroke-width="0.6" marker-end="url(#arr)"/>
+<ellipse cx="679" cy="143" rx="40" ry="40" fill="#e8f4ff" stroke="#0057b7" stroke-width="0.7" stroke-dasharray="4,2"/>
+<text x="679" y="146" text-anchor="middle" font-size="7" fill="#0057b7">21700 cell</text>
+<text x="679" y="155" text-anchor="middle" font-size="7" fill="#0057b7">(Ø21 × 70mm)</text>
+
+  <line x1="625" y1="213" x2="625" y2="225" stroke="#333" stroke-width="0.5" stroke-dasharray="none"/>
+  <line x1="637" y1="213" x2="637" y2="225" stroke="#333" stroke-width="0.5"/>
+  <line x1="625" y1="225" x2="637" y2="225" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="631.0" y="237" text-anchor="middle" font-size="9" font-family="Arial" fill="#111">3</text>
+
+  <line x1="637" y1="213" x2="637" y2="225" stroke="#333" stroke-width="0.5" stroke-dasharray="none"/>
+  <line x1="721" y1="213" x2="721" y2="225" stroke="#333" stroke-width="0.5"/>
+  <line x1="637" y1="225" x2="721" y2="225" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="679.0" y="237" text-anchor="middle" font-size="9" font-family="Arial" fill="#111">Ø 21</text>
+
+  <line x1="617" y1="93" x2="605" y2="93" stroke="#333" stroke-width="0.5"/>
+  <line x1="617" y1="193" x2="605" y2="193" stroke="#333" stroke-width="0.5"/>
+  <line x1="605" y1="93" x2="605" y2="193" stroke="#333" stroke-width="0.5" marker-start="url(#arr-r)" marker-end="url(#arr)"/>
+  <text x="601" y="146.0" text-anchor="end" font-size="9" font-family="Arial" fill="#111">70*</text>
+<text x="737" y="219" font-size="7" fill="#555">*drawn to 1.43:1 for clarity</text>
+<rect x="580" y="510" width="315" height="170" fill="white" stroke="black" stroke-width="1"/>
+<line x1="580" y1="538" x2="895" y2="538" stroke="black" stroke-width="0.5"/>
+<line x1="580" y1="562" x2="895" y2="562" stroke="black" stroke-width="0.5"/>
+<line x1="580" y1="586" x2="895" y2="586" stroke="black" stroke-width="0.5"/>
+<line x1="580" y1="610" x2="895" y2="610" stroke="black" stroke-width="0.5"/>
+<line x1="580" y1="634" x2="895" y2="634" stroke="black" stroke-width="0.5"/>
+<line x1="580" y1="658" x2="895" y2="658" stroke="black" stroke-width="0.5"/>
+<line x1="700" y1="510" x2="700" y2="680" stroke="black" stroke-width="0.5"/>
+<text x="586" y="528" font-size="8" font-weight="bold" fill="#333">TITLE</text>
+<text x="706" y="528" font-size="9" fill="#111">EV Battery Module — Cell Holder Frame</text>
+<text x="586" y="552" font-size="8" font-weight="bold" fill="#333">PART NO.</text>
+<text x="706" y="552" font-size="9" fill="#111">EBM-001-REV-A</text>
+<text x="586" y="576" font-size="8" font-weight="bold" fill="#333">MATERIAL</text>
+<text x="706" y="576" font-size="9" fill="#111">Al 6061-T6  (k = 160 W/m·K)</text>
+<text x="586" y="600" font-size="8" font-weight="bold" fill="#333">SCALE</text>
+<text x="706" y="600" font-size="9" fill="#111">1:1  (dimensions in mm)</text>
+<text x="586" y="624" font-size="8" font-weight="bold" fill="#333">DRAWN BY</text>
+<text x="706" y="624" font-size="9" fill="#111">Bapu Manu — SRH Berlin, 2026</text>
+<text x="586" y="648" font-size="8" font-weight="bold" fill="#333">TOLERANCES</text>
+<text x="706" y="648" font-size="9" fill="#111">General: ±0.1 mm  |  Angles: ±0.5°</text>
+<text x="586" y="672" font-size="8" font-weight="bold" fill="#333">STANDARD</text>
+<text x="706" y="672" font-size="9" fill="#111">ISO 2768 (fine)</text>
+<rect x="580" y="510" width="315" height="28" fill="#1a3a5c"/>
+<text x="737" y="528" text-anchor="middle" font-size="11" font-weight="bold" fill="white">ENGINEERING DRAWING</text>
+
+<text x="580" y="420" font-size="9" font-weight="bold" fill="#111">NOTES:</text>
+<text x="580" y="435" font-size="8.5" fill="#333">1. Module houses 15 × 21700 Li-ion cells in 3×5 array.</text>
+<text x="580" y="449" font-size="8.5" fill="#333">2. Total heat load: 30 W at 2C discharge rate.</text>
+<text x="580" y="463" font-size="8.5" fill="#333">3. Cooling channels on both side walls (X± faces).</text>
+<text x="580" y="477" font-size="8.5" fill="#333">4. Wall thickness 3 mm standard; 7 mm at channel location.</text>
+<text x="580" y="491" font-size="8.5" fill="#333">5. All fillets R1.5 mm (inner corners) unless noted.</text>
+<text x="580" y="505" font-size="8.5" fill="#333">6. Surface finish Ra 1.6 μm on cell pocket walls.</text>
+<text x="249" y="316" text-anchor="middle" font-size="8" fill="#666" font-style="italic">Fig. 1 — Top (Plan)</text>
+<text x="249" y="516" text-anchor="middle" font-size="8" fill="#666" font-style="italic">Fig. 2 — Front</text>
+<text x="465" y="534" text-anchor="middle" font-size="8" fill="#666" font-style="italic">Fig. 3 — Side (Right)</text>
+</svg>
