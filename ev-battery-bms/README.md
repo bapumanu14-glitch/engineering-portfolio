@@ -117,6 +117,7 @@ ev-battery-bms/
 │   ├── 02_drive_cycle.png      # Synthetic current and voltage profile
 │   ├── 03_soc_estimation.png   # Coulomb counting vs EKF comparison
 │   └── 04_soh_capacity_fade.png # Capacity fade and its effect on SoC error
+├── Code_Explained_BMS.pdf      # Code walkthrough
 └── README.md
 ```
 
@@ -157,4 +158,4 @@ bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV and automotive engineering portfolio targeting Werkstudent and graduate roles in battery systems, thermal design, and structura
+*Part of an EV and automotive engineering portfolio targeting Werkstudent and graduat
