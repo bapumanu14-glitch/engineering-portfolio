@@ -220,9 +220,9 @@ Outputs gear mesh forces, bending moments, fatigue stresses, Marin factors, and 
 ## Author
 
 **Bapu Manu**
-MSc Student · SRH Berlin
+M.Eng. Student · SRH Berlin
 bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate rol
+*Part of an EV/automotive engineering portfolio targeting graduate and junior roles in powertrain engineering, structural simulation, and CAE.*

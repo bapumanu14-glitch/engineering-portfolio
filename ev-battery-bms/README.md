@@ -153,9 +153,9 @@ Prints cell parameters, drive cycle statistics, Coulomb counting and EKF error m
 ## Author
 
 **Bapu Manu**
-MSc Student · SRH Berlin
+M.Eng. Student · SRH Berlin
 bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV and automotive engineering portfolio targeting Werkstudent and graduat
+*Part of an EV and automotive engineering portfolio targeting graduate and junior roles in battery systems, thermal design, and structural simulation.*

@@ -8,3 +8,12 @@ Thumbs.db
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# ANSYS solver output and lock/temp files (large, not needed on GitHub)
+*.rst
+*.rth
+*.engd
+*.wbjn
+*.dat
+*.tmp
+.~lock.*

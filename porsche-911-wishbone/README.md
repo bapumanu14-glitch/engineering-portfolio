@@ -189,9 +189,9 @@ Outputs wheel loads and wishbone forces for all six load cases to the console, p
 ## Author
 
 **Bapu Manu**
-MSc Student · SRH Berlin
+M.Eng. Student · SRH Berlin
 bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in structural simulation, vehicle 
+*Part of an EV/automotive engineering portfolio targeting graduate and junior roles in structural simulation, vehicle dynamics, and CAE.*

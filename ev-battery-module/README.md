@@ -196,9 +196,9 @@ The lumped model treats the housing as isothermal, so it can't capture 3D corner
 ## Author
 
 **Bapu Manu**
-MSc Student · SRH Berlin
+M.Eng. Student · SRH Berlin
 bapumanu2001@gmail.com
 
 ---
 
-*Part of an EV/automotive engineering portfolio targeting Werkstudent and graduate roles in battery systems, thermal management, and struc
+*Part of an EV/automotive engineering portfolio targeting graduate and junior roles in battery systems, thermal management, and structural simulation.*
