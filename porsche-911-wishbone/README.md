@@ -190,7 +190,7 @@ Outputs wheel loads and wishbone forces for all six load cases to the console, p
 
 **Bapu Manu**
 M.Eng. Student · SRH Berlin
-bapumanu2001@gmail.com
+bapumanu14@gmail.com
 
 ---
 

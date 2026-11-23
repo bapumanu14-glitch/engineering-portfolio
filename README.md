@@ -1,6 +1,6 @@
 # Engineering Portfolio — Bapu Manu
 
-M.Eng. Student, SRH Berlin University of Applied Sciences · bapumanu2001@gmail.com
+M.Eng. Student, SRH Berlin University of Applied Sciences · bapumanu14@gmail.com
 
 Six CAE and simulation projects covering thermal design, structural FEA, fatigue analysis, CFD post processing, battery management systems, and e-drive design. Most run the same workflow: first principles analysis in Python, geometry in CAD, then validation with finite element or CFD tools. The BMS and traction motor projects run the algorithmic and electromagnetic side of the powertrain: state estimation and motor design instead of geometry.
 
@@ -47,7 +47,7 @@ Where the analytical and numerical results disagree, the gap gets explained rath
 
 **Bapu Manu**
 M.Eng. Sustainable Technology Management — Automotive, SRH Berlin
-bapumanu2001@gmail.com
+bapumanu14@gmail.com
 
 ---
 

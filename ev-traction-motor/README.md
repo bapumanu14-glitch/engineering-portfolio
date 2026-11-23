@@ -137,7 +137,7 @@ Prints motor parameters, drive cycle thermal statistics, and efficiency map resu
 
 **Bapu Manu**
 M.Eng. Student · SRH Berlin
-bapumanu2001@gmail.com
+bapumanu14@gmail.com
 
 ---
 

@@ -154,7 +154,7 @@ Prints cell parameters, drive cycle statistics, Coulomb counting and EKF error m
 
 **Bapu Manu**
 M.Eng. Student · SRH Berlin
-bapumanu2001@gmail.com
+bapumanu14@gmail.com
 
 ---
 
